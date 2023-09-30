@@ -17,11 +17,59 @@ repositories {
 }
 
 dependencies {
-    // Use TestNG framework, also requires calling test.useTestNG() below
-    testImplementation 'org.testng:testng:7.5'
+    // TestNG
+    testImplementation 'org.testng:testng:7.8.0'
 
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:31.1-jre'
+    // Appium Java Client
+    implementation 'io.appium:java-client:8.5.1'
+
+    // Selenium Java
+    implementation 'org.seleniumhq.selenium:selenium-java:4.12.1'
+
+    // WebDriverManager
+    implementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
+
+    // Rest Assured
+    implementation 'io.rest-assured:rest-assured:5.3.1'
+
+    // Guava
+    implementation 'com.google.guava:guava:32.1.2-jre'
+
+    // Jackson Databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    // JsonAssert (for tests)
+    testImplementation 'org.skyscreamer:jsonassert:1.5.1'
+
+    // Lombok
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+
+    // Allure TestNG
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.24.0'
+
+    // Allure Rest Assured
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.24.0'
+
+    // JavaFaker
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+
+
+    // Log4j Core
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    // AspectJ Weaver
+    implementation 'org.aspectj:aspectjweaver:1.9.6'
+
+    implementation group: 'net.sourceforge.tess4j', name: 'tess4j', version: '5.7.0'
+
+}
+
+// Apply a specific Java toolchain to ease working on different environments.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(20)
+    }
 }
 
 application {

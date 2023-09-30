@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/testvagrant/Desktop/smule">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="smule.Tests.ActivityPageTest">
+                <methods>
+                    <include name="shouldGoToInvitePage"/>
+                    <include name="shouldGoToNewsPage"/>
+                    <include name="shouldGoToNotification"/>
+                </methods>
+            </class>
+            <class name="smule.Tests.ExploreTest">
+                <methods>
+                    <include name="shouldGotoExplorePage"/>
+                </methods>
+            </class>
+            <class name="smule.Tests.FeedTest">
+                <methods>
+                    <include name="shouldPlayVideo"/>
+                </methods>
+            </class>
+            <class name="smule.Tests.LoginTest">
+                <methods>
+                    <include name="testingLanguageSelection"/>
+                    <include name="shouldGoToSongBookPage"/>
+                </methods>
+            </class>
+            <class name="smule.Tests.MessageTest">
+                <methods>
+                    <include name="shouldSendMessage"/>
+                </methods>
+            </class>
+            <class name="smule.Tests.ProfileTest">
+                <methods>
+                    <include name="shouldGoToProfilePage"/>
+                    <include name="shouldUpdateProfile"/>
+                    <include name="shouldBookMarkTheSong"/>
+                    <include name="shouldAddSongToPlaylist"/>
+                    <include name="shouldGoToInvitePage"/>
+                </methods>
+            </class>
+            <class name="smule.Tests.SearchTest">
+                <methods>
+                    <include name="shouldGoToSearchPage"/>
+                    <include name="shouldSearchSongs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
