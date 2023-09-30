@@ -12,8 +12,8 @@ public class SearchTest extends BaseTest {
     SongPage songBookPage;
     SearchPage searchPage;
 
-    @Test
-    public void shouldGoToSearchPage() throws InterruptedException {
+    @Test(groups = {"RunAll","Sanity"})
+    public void TestGoToSearchPage() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         searchPage = songBookPage.navigateToSearchPage();
@@ -21,8 +21,8 @@ public class SearchTest extends BaseTest {
         Assert.assertEquals(text, "Trending", "Text from Search Page is not matching!!");
     }
 
-    @Test
-    public void shouldSearchSongs() throws InterruptedException {
+    @Test(groups = {"regression","RunAll","Sanity"})
+    public void testSearchSongs() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         searchPage = songBookPage.navigateToSearchPage();

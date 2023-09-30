@@ -12,8 +12,8 @@ public class ActivityPageTest extends BaseTest {
     LoginPage loginPage;
     SongPage songBookPage;
     ActivityPage activityPage;
-    @Test
-    public void shouldGoToInvitePage() throws InterruptedException{
+    @Test(groups = {"RunAll","Sanity"})
+    public void testGoToInvitePage() throws InterruptedException{
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         activityPage = songBookPage.navigateToActivityPage();
@@ -21,8 +21,8 @@ public class ActivityPageTest extends BaseTest {
         Assert.assertTrue(result, "Join button in InvitePage is not enabled!!");
     }
 
-    @Test
-    public void shouldGoToNewsPage() throws InterruptedException{
+    @Test(groups = {"RunAll","Sanity"})
+    public void testGoToNewsPage() throws InterruptedException{
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         activityPage = songBookPage.navigateToActivityPage();
@@ -30,8 +30,8 @@ public class ActivityPageTest extends BaseTest {
         Assert.assertEquals(text, "No news from Smule yet", "Text from news page is not matching.");
     }
 
-    @Test
-    public void shouldGoToNotification() throws InterruptedException{
+    @Test(groups = {"RunAll","Sanity"})
+    public void testGoToNotification() throws InterruptedException{
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         activityPage = songBookPage.navigateToActivityPage();

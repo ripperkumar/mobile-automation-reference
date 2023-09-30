@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true" name="/Users/testvagrant/Desktop/smule">
         <groups>
             <run>
-                <include name="run-all"/>
+                <include name="RunAll"/>
             </run>
         </groups>
         <classes>

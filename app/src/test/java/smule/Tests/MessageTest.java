@@ -13,7 +13,7 @@ public class MessageTest extends BaseTest {
     SongPage songBookPage;
     MessagePage messagePage;
 
-    @Test
+    @Test(groups = {"regression","RunAll","Sanity"})
     public void shouldSendMessage() throws InterruptedException{
         String userName = "kbaganna";
         String message = "Hii";

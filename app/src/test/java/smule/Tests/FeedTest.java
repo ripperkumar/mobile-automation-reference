@@ -13,8 +13,8 @@ public class FeedTest extends BaseTest {
     SongPage songBookPage;
     FeedPage feedPage;
 
-    @Test
-    public void shouldPlayVideo() throws InterruptedException {
+    @Test(groups = {"regression","RunAll","Sanity"})
+    public void testPlayVideo() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         feedPage = songBookPage.navigateToFeedPage();

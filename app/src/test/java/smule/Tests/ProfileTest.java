@@ -15,8 +15,8 @@ public class ProfileTest extends BaseTest {
     ProfilePage profilePage;
     FeedPage feedPage;
 
-    @Test
-    public void shouldGoToProfilePage() throws InterruptedException {
+    @Test(groups = {"RunAll","Sanity"})
+    public void testGoToProfilePage() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         profilePage = songBookPage.navigateToProfilePage();
@@ -24,8 +24,8 @@ public class ProfileTest extends BaseTest {
         Assert.assertEquals(userName, "RoshanKumar2807", "Username is not matching!!");
     }
 
-    @Test
-    public void shouldUpdateProfile() throws InterruptedException {
+    @Test(groups = {"regression","RunAll","Sanity"})
+    public void testUpdateProfile() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         profilePage = songBookPage.navigateToProfilePage();
@@ -34,8 +34,8 @@ public class ProfileTest extends BaseTest {
         Assert.assertEquals(result, bio, "Profile not updated!!");
     }
 
-    @Test
-    public void shouldBookMarkTheSong() throws InterruptedException {
+    @Test(groups = {"regression","RunAll","Sanity"})
+    public void testBookMarkTheSong() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         songBookPage.bookmarkTheSong();
@@ -44,8 +44,8 @@ public class ProfileTest extends BaseTest {
         Assert.assertTrue(result, "Song is not bookmarked!!");
     }
 
-    @Test
-    void shouldAddSongToPlaylist() throws InterruptedException {
+    @Test(groups = {"regression","RunAll","Sanity"})
+    void testAddSongToPlaylist() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         feedPage = songBookPage.navigateToFeedPage();
@@ -55,8 +55,8 @@ public class ProfileTest extends BaseTest {
         Assert.assertNotEquals(resultMessage, "0 recordings", "Songs not added to Playlist!!");
     }
 
-    @Test
-    void shouldGoToInvitePage() throws InterruptedException {
+    @Test(groups = {"RunAll","Sanity"})
+    void testGoToInvitePage() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         profilePage = songBookPage.navigateToProfilePage();

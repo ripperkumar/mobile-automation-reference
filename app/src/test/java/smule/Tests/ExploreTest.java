@@ -12,8 +12,8 @@ public class ExploreTest extends BaseTest {
     SongPage songBookPage;
     ExplorePage explorePage;
 
-    @Test
-    public void shouldGotoExplorePage() throws InterruptedException {
+    @Test(groups = {"RunAll","Sanity"})
+    public void testGotoExplorePage() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         explorePage = songBookPage.navigateToExplorePage();

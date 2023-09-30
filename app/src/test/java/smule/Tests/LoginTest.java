@@ -10,8 +10,8 @@ public class LoginTest extends BaseTest {
     SongPage songBookPage;
 
 
-    @Test
-    public void testingLanguageSelection() throws InterruptedException {
+    @Test(groups = {"regression","RunAll","Sanity"})
+    public void testLanguageSelection() throws InterruptedException {
         String actualLoginHeader ="Sing millions of songs and make friends through music";
         loginPage = new LoginPage(driver);
         loginPage.selectLanguage();
@@ -19,8 +19,8 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(loginHeader,actualLoginHeader,"Login Header not matching");
     }
 
-    @Test
-    public void shouldGoToSongBookPage() throws InterruptedException {
+    @Test(groups = {"regression","RunAll","Sanity"})
+    public void testGoToSongBookPage() throws InterruptedException {
         loginPage = new LoginPage(driver);
         songBookPage = loginPage.goToSongBookPage();
         Assert.assertTrue(songBookPage.isSearchBarVisible());
